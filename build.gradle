@@ -14,7 +14,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'io.github.hauntedchest.the_patchlandss' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'io.github.hauntedchest.the_patchlands' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'modid'
 
 
