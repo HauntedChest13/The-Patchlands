@@ -1,6 +1,7 @@
 package com.hauntedchest.the_patchlands;
 
 import com.hauntedchest.the_patchlands.block.ModBlocks;
+import com.hauntedchest.the_patchlands.block.block_classes.ConvisteelOreBlock;
 import com.hauntedchest.the_patchlands.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -36,6 +37,7 @@ public class PatchlandsMain
         ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
+        MinecraftForge.EVENT_BUS.addListener(ConvisteelOreBlock::dropsWhenExploded);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

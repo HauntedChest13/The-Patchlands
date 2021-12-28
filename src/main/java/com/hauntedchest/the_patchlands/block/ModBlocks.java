@@ -1,6 +1,7 @@
 package com.hauntedchest.the_patchlands.block;
 
 import com.hauntedchest.the_patchlands.PatchlandsMain;
+import com.hauntedchest.the_patchlands.block.block_classes.ConvisteelOreBlock;
 import com.hauntedchest.the_patchlands.item.ModCreativeTab;
 import com.hauntedchest.the_patchlands.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -24,12 +25,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> BRITTLESTONE = registerBlock("brittlestone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GREEN)
                     .requiresCorrectToolForDrops()
-                    .strength(3.5F, 50F)), ModCreativeTab.PATCHLANDS_BLOCKS_TAB);
+                    .strength(3.5F, 4F)), ModCreativeTab.PATCHLANDS_BLOCKS_TAB);
 
     public static final RegistryObject<Block> CONVISTEEL_ORE = registerBlock("convisteel_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW)
+            () -> new ConvisteelOreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_YELLOW)
                     .requiresCorrectToolForDrops()
-                    .strength(3.5F, 50F)), ModCreativeTab.PATCHLANDS_BLOCKS_TAB);
+                    .strength(3.5F, 3F)), ModCreativeTab.PATCHLANDS_BLOCKS_TAB);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name,block);
