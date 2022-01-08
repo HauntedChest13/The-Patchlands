@@ -10,8 +10,8 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
-public class ConvisteelOreBlock extends Block {
-    public ConvisteelOreBlock(Properties prop) {
+public class IgnisteelOreBlock extends Block {
+    public IgnisteelOreBlock(Properties prop) {
         super(prop);
     }
 
@@ -21,7 +21,7 @@ public class ConvisteelOreBlock extends Block {
         int result = r.nextInt(100-1);
 
         if(result < 90) {
-            Block.popResource(event.getWorld(), event.getAffectedBlocks().get(r.nextInt(1)), ModItems.RAW_CONVISTEEL.get().getDefaultInstance());
+            Block.popResource(event.getWorld(), event.getAffectedBlocks().get(r.nextInt(1)), ModItems.RAW_IGNISTEEL.get().getDefaultInstance());
         }
         if(result < 60) {
             Block.popResource(event.getWorld(), event.getAffectedBlocks().get(r.nextInt(1)), ModBlocks.BRITTLESTONE.get().asItem().getDefaultInstance());

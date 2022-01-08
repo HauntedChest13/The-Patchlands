@@ -15,7 +15,7 @@ public class ModItems {
     public static final RegistryObject<Item> WRETCHED_BEANS = ITEMS.register("wretched_beans",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.PATCHLANDS_ITEMS_TAB)));
 
-    public static final RegistryObject<Item> RAW_CONVISTEEL = ITEMS.register("raw_convisteel",
+    public static final RegistryObject<Item> RAW_IGNISTEEL = ITEMS.register("raw_ignisteel",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.PATCHLANDS_ITEMS_TAB)));
 
 

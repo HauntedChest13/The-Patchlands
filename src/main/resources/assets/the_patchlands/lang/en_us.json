@@ -1,9 +1,9 @@
 {
   "block.the_patchlands.brittlestone": "Brittlestone",
-  "block.the_patchlands.convisteel_ore": "Rusted Convisteel",
+  "block.the_patchlands.ignisteel_ore": "Ignisteel Ore",
 
   "item.the_patchlands.wretched_beans": "Wretched Beans",
-  "item.the_patchlands.raw_convisteel": "Raw Convisteel",
+  "item.the_patchlands.raw_": "Raw Ignisteel",
 
   "itemGroup.patchlandsBlockModTab": "Patchlands Block Tab",
   "itemGroup.patchlandsItemModTab": "Patchlands Item Tab"
