@@ -1,9 +1,12 @@
 {
   "block.the_patchlands.brittlestone": "Brittlestone",
   "block.the_patchlands.ignisteel_ore": "Ignisteel Ore",
+  "block.the_patchlands.ignisteel_block": "Block of Ignisteel",
+  "block.the_patchlands.raw_ignisteel_block": "Raw Ignisteel Block",
 
   "item.the_patchlands.wretched_beans": "Wretched Beans",
   "item.the_patchlands.raw_ignisteel": "Raw Ignisteel",
+  "item.the_patchlands.ignisteel_nugget": "Ignisteel Nugget",
 
   "itemGroup.patchlandsBlockModTab": "Patchlands Block Tab",
   "itemGroup.patchlandsItemModTab": "Patchlands Item Tab"

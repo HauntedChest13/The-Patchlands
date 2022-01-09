@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "the_patchlands:ignisteel_ore",
+    "the_patchlands:raw_ignisteel_block",
+    "the_patchlands:ignisteel_block"
+  ]
+}

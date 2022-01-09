@@ -32,6 +32,16 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(3.5F, 3F)), ModCreativeTab.PATCHLANDS_BLOCKS_TAB);
 
+    public static final RegistryObject<Block> IGNISTEEL_BLOCK = registerBlock("ignisteel_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL, MaterialColor.COLOR_YELLOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F, 3F)), ModCreativeTab.PATCHLANDS_BLOCKS_TAB);
+
+    public static final RegistryObject<Block> RAW_IGNISTEEL_BLOCK = registerBlock("raw_ignisteel_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL, MaterialColor.COLOR_YELLOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F, 3F)), ModCreativeTab.PATCHLANDS_BLOCKS_TAB);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name,block);
         registerBlockItem(name, toReturn, tab);

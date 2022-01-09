@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "the_patchlands:ignisteel_block"
+    }
+  ],
+  "result": {
+    "item": "the_patchlands:ignisteel_ingot",
+    "count": 9
+  }
+}

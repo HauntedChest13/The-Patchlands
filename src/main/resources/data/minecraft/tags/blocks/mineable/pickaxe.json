@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
       "the_patchlands:brittlestone",
-      "the_patchlands:ignisteel_ore"
+      "the_patchlands:ignisteel_ore",
+      "the_patchlands:ignisteel_block",
+      "the_patchlands:raw_ignisteel_block"
   ]
 }
