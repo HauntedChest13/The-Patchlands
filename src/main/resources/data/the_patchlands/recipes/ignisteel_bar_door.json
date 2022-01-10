@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "the_patchlands:ignisteel_bars"
+    }
+  },
+  "result": {
+    "item": "the_patchlands:ignisteel_bar_door",
+    "count": 3
+  }
+}

@@ -4,6 +4,9 @@
       "the_patchlands:brittlestone",
       "the_patchlands:ignisteel_ore",
       "the_patchlands:ignisteel_block",
-      "the_patchlands:raw_ignisteel_block"
+      "the_patchlands:raw_ignisteel_block",
+    "the_patchlands:ignisteel_bars",
+    "the_patchlands:ignisteel_bar_door",
+    "the_patchlands:ignisteel_chain"
   ]
 }

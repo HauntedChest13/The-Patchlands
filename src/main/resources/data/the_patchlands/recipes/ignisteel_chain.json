@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N",
+    "I",
+    "N"
+  ],
+  "key": {
+    "I": {
+      "item": "the_patchlands:ignisteel_ingot"
+    },
+    "N": {
+      "item": "the_patchlands:ignisteel_nugget"
+    }
+  },
+  "result": {
+    "item": "the_patchlands:ignisteel_chain"
+  }
+}
