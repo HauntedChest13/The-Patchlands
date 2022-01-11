@@ -6,10 +6,13 @@
   "block.the_patchlands.ignisteel_bars": "Ignisteel Bars",
   "block.the_patchlands.ignisteel_bar_door": "Ignisteel Bar Door",
   "block.the_patchlands.ignisteel_chain": "Ignisteel Chains",
+  "block.the_patchlands.cut_ignisteel": "Cut Ignisteel",
+  "block.the_patchlands.cut_ignisteel_tiles": "Cut Ignisteel Tiles",
 
   "item.the_patchlands.wretched_beans": "Wretched Beans",
   "item.the_patchlands.raw_ignisteel": "Raw Ignisteel",
   "item.the_patchlands.ignisteel_nugget": "Ignisteel Nugget",
+  "item.the_patchlands.ignisteel_ingot": "Ignisteel Ingot",
 
   "itemGroup.patchlandsBlockModTab": "Patchlands Block Tab",
   "itemGroup.patchlandsItemModTab": "Patchlands Item Tab"

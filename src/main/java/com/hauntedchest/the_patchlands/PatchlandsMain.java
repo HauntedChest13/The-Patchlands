@@ -32,7 +32,7 @@ public class PatchlandsMain
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::setupClient);
-        MinecraftForge.EVENT_BUS.addListener(IgnisteelOreBlock::dropsWhenExploded);
+        //MinecraftForge.EVENT_BUS.addListener(IgnisteelOreBlock::dropsWhenExploded);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
