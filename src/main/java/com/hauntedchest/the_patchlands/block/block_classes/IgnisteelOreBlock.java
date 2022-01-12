@@ -1,14 +1,11 @@
 package com.hauntedchest.the_patchlands.block.block_classes;
 
-import com.hauntedchest.the_patchlands.block.ModBlocks;
-import com.hauntedchest.the_patchlands.item.ModItems;
+import com.hauntedchest.the_patchlands.registry.TPBlockRegister;
+import com.hauntedchest.the_patchlands.registry.TPItemRegister;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.event.world.ExplosionEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.Random;
@@ -39,10 +36,10 @@ public class IgnisteelOreBlock extends Block {
         int result = r.nextInt(99-1);
 
         if (result < 70) {
-            Block.popResource(lvl, pos, ModItems.RAW_IGNISTEEL.get().getDefaultInstance());
+            Block.popResource(lvl, pos, TPItemRegister.RAW_IGNISTEEL.get().getDefaultInstance());
         }
         if (result < 60) {
-            Block.popResource(lvl, pos, ModBlocks.BRITTLESTONE.get().asItem().getDefaultInstance());
+            Block.popResource(lvl, pos, TPBlockRegister.BRITTLESTONE.get().asItem().getDefaultInstance());
         }
     }
 

@@ -1,8 +1,8 @@
 package com.hauntedchest.the_patchlands;
 
-import com.hauntedchest.the_patchlands.block.ModBlocks;
-import com.hauntedchest.the_patchlands.block.block_classes.IgnisteelOreBlock;
-import com.hauntedchest.the_patchlands.item.ModItems;
+import com.hauntedchest.the_patchlands.registry.TPBlockRegister;
+import com.hauntedchest.the_patchlands.registry.TPItemRegister;
+import com.hauntedchest.the_patchlands.registry.TPParticleTypes;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -27,8 +27,9 @@ public class PatchlandsMain
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
+        TPItemRegister.register(eventBus);
+        TPBlockRegister.register(eventBus);
+        TPParticleTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::setupClient);
@@ -39,9 +40,10 @@ public class PatchlandsMain
     }
 
     private void setupClient(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.IGNISTEEL_BARS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.IGNISTEEL_BAR_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.IGNISTEEL_CHAINS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_BARS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_BAR_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_CHAINS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_LANTERN.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event)
