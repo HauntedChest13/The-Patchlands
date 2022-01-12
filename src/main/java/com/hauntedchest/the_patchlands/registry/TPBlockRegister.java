@@ -33,7 +33,7 @@ public class TPBlockRegister {
     public static final RegistryObject<Block> IGNISTEEL_CHAINS = registerBlock("ignisteel_chain", () -> new ChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.NONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.CHAIN).noOcclusion()), TPCreativeTab.PATCHLANDS_BLOCKS_TAB);
     public static final RegistryObject<Block> CUT_IGNISTEEL = registerBlock("cut_ignisteel", () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(5F, 6F)), TPCreativeTab.PATCHLANDS_BLOCKS_TAB);
     public static final RegistryObject<Block> CUT_IGNISTEEL_TILES = registerBlock("cut_ignisteel_tiles", () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(5F, 6F)), TPCreativeTab.PATCHLANDS_BLOCKS_TAB);
-    public static final RegistryObject<Block> IGNISTEEL_LANTERN = registerBlock("ignisteel_lantern", () -> new IgnisteelLanternBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(5F, 6F).sound(SoundType.LANTERN).lightLevel((p_152680_) -> {
+    public static final RegistryObject<Block> IGNISTEEL_LANTERN_BLOCK = registerBlock("ignisteel_lantern_block", () -> new IgnisteelLanternBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_YELLOW).requiresCorrectToolForDrops().strength(5F, 6F).sound(SoundType.LANTERN).lightLevel((p_152680_) -> {
         return 10;
 }).noOcclusion()), TPCreativeTab.PATCHLANDS_BLOCKS_TAB);
 

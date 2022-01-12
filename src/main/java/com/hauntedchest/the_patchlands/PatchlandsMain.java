@@ -43,7 +43,7 @@ public class PatchlandsMain
         ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_BARS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_BAR_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_CHAINS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_LANTERN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_LANTERN_BLOCK.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event)

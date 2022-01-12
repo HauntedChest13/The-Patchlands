@@ -10,12 +10,12 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
@@ -27,15 +27,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class IgnisteelLanternBlock extends Block {
+public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty FLICKERING = BooleanProperty.create("flickering");
     public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
     protected static final VoxelShape AABB = Shapes.or(Block.box(2.0D, 2.0D, 5.5D, 14.0D, 7.0D, 10.5D), Block.box(7.0D, 1.0D, 8.0D, 9.0D, 3.0D, 10.0D));
     protected static final VoxelShape HANGING_AABB = Shapes.or(Block.box(2.0D, 6.0D, 5.5D, 14.0D, 11.0D, 10.5D), Block.box(6.0D, 8.0D, 6.0D, 10.0D, 10.0D, 10.0D));
     public IgnisteelLanternBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(HANGING, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE).setValue(FLICKERING, Boolean.FALSE));
+        this.registerDefaultState(this.stateDefinition.any().setValue(HANGING, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE).setValue(FACING, Direction.NORTH));
     }
 
     @Nullable
@@ -59,7 +60,7 @@ public class IgnisteelLanternBlock extends Block {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(HANGING, WATERLOGGED, FLICKERING);
+        builder.add(HANGING, WATERLOGGED, FACING);
     }
 
     public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos p_153481_) {
@@ -90,6 +91,14 @@ public class IgnisteelLanternBlock extends Block {
 
     public boolean isPathfindable(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, PathComputationType pathComputationType) {
         return false;
+    }
+
+    public BlockState rotate(BlockState pState, Rotation pRot) {
+        return pState.setValue(FACING, pRot.rotate(pState.getValue(FACING)));
+    }
+
+    public BlockState mirror(BlockState pState, Mirror pMirror) {
+        return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
 
     @Override
