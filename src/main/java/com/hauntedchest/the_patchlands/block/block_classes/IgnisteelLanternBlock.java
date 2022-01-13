@@ -31,9 +31,12 @@ public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterlo
     public static final BooleanProperty FLICKERING = BooleanProperty.create("flickering");
     public static final BooleanProperty HANGING = BlockStateProperties.HANGING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     protected static final VoxelShape AABB = Shapes.or(Block.box(2.0D, 2.0D, 5.5D, 14.0D, 7.0D, 10.5D), Block.box(7.0D, 1.0D, 8.0D, 9.0D, 3.0D, 10.0D));
     protected static final VoxelShape HANGING_AABB = Shapes.or(Block.box(2.0D, 6.0D, 5.5D, 14.0D, 11.0D, 10.5D), Block.box(6.0D, 8.0D, 6.0D, 10.0D, 10.0D, 10.0D));
+    protected static final VoxelShape AABB2 = Shapes.or(Block.box(5.5D, 2.0D, 2.0D, 10.5D, 7.0D, 14.0D), Block.box(7.0D, 1.0D, 8.0D, 9.0D, 3.0D, 10.0D));
+    protected static final VoxelShape HANGING_AABB2 = Shapes.or(Block.box(5.5D, 6.0D, 2.0D, 10.5D, 11.0D, 14.0D), Block.box(5, 11, 8, 11, 16, 8));
+    public static VoxelShape voxelShape = Shapes.or(Block.box(2.0D, 2.0D, 5.5D, 14.0D, 7.0D, 10.5D), Block.box(7.0D, 1.0D, 8.0D, 9.0D, 3.0D, 10.0D));
     public IgnisteelLanternBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(HANGING, Boolean.FALSE).setValue(WATERLOGGED, Boolean.FALSE).setValue(FACING, Direction.NORTH));
@@ -47,7 +50,7 @@ public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterlo
             if (direction.getAxis() == Direction.Axis.Y) {
                 BlockState blockstate = this.defaultBlockState().setValue(HANGING, direction == Direction.UP);
                 if (blockstate.canSurvive(p_153467_.getLevel(), p_153467_.getClickedPos())) {
-                    return blockstate.setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER);
+                    return blockstate.setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER).setValue(FACING, p_153467_.getHorizontalDirection());
                 }
             }
         }
@@ -56,7 +59,37 @@ public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterlo
     }
 
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
-        return blockState.getValue(HANGING) ? HANGING_AABB : AABB;
+       // return blockState.getValue(HANGING) ? HANGING_AABB : AABB;
+        if(blockState.getValue(HANGING)){
+            if ((Direction) blockState.getValue(FACING) == Direction.NORTH) {
+                voxelShape = HANGING_AABB;
+            }
+            if ((Direction) blockState.getValue(FACING) == Direction.SOUTH) {
+                voxelShape = HANGING_AABB;
+            }
+            if ((Direction) blockState.getValue(FACING) == Direction.EAST) {
+                voxelShape = HANGING_AABB2;
+            }
+            if ((Direction) blockState.getValue(FACING) == Direction.WEST) {
+                voxelShape = HANGING_AABB2;
+            }
+        } else {
+            if ((Direction) blockState.getValue(FACING) == Direction.NORTH) {
+                voxelShape = AABB;
+            }
+            if ((Direction) blockState.getValue(FACING) == Direction.SOUTH) {
+                voxelShape = AABB;
+            }
+            if ((Direction) blockState.getValue(FACING) == Direction.EAST) {
+                voxelShape = AABB2;
+            }
+            if ((Direction) blockState.getValue(FACING) == Direction.WEST) {
+                voxelShape = AABB2;
+            }
+        }
+
+        return voxelShape;
+
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
