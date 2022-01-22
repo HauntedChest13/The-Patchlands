@@ -1,0 +1,65 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"1": "the_patchlands:block/cyan_wretched_leaf",
+		"particle": "the_patchlands:block/cyan_wretched_leaf"
+	},
+	"elements": [
+		{
+			"from": [0, 5, 3.5],
+			"to": [16, 5, 19.5],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"up": {"uv": [4, 4, 0, 0], "texture": "#1"},
+				"down": {"uv": [4, 4, 0, 8], "texture": "#1"}
+			}
+		},
+		{
+			"from": [8, 0, 7],
+			"to": [8, 10, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 2.5], "texture": "#1"},
+				"east": {"uv": [4, 0, 6.25, 2.5], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 2.5], "texture": "#1"},
+				"west": {"uv": [4, 2.5, 6.25, 5], "texture": "#1"},
+				"up": {"uv": [0, 2.25, 0, 0], "texture": "#1"},
+				"down": {"uv": [0, 0, 0, 2.25], "texture": "#1"}
+			}
+		},
+		{
+			"from": [4.5, 0, 8.5],
+			"to": [13.5, 10, 8.5],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [0, 0, 7]},
+			"faces": {
+				"north": {"uv": [4, 5, 6.25, 7.5], "texture": "#1"},
+				"east": {"uv": [0, 0, 0, 2.5], "texture": "#1"},
+				"south": {"uv": [6.25, 0, 8.5, 2.5], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 2.5], "texture": "#1"},
+				"up": {"uv": [2.25, 0, 0, 0], "texture": "#1"},
+				"down": {"uv": [2.25, 0, 0, 0], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "leaf",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [
+				0,
+				{
+					"name": "stem",
+					"origin": [0, 0, 0],
+					"color": 0,
+					"children": [1, 2]
+				}
+			]
+		}
+	]
+}

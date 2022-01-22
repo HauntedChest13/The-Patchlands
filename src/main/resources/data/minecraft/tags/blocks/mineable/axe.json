@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "the_patchlands:reinforced_oak_log",
+    "the_patchlands:reinforced_acacia_log",
+    "the_patchlands:reinforced_birch_log",
+    "the_patchlands:reinforced_spruce_log",
+    "the_patchlands:reinforced_dark_oak_log",
+    "the_patchlands:reinforced_jungle_log",
+    "the_patchlands:reinforced_crimson_stem",
+    "the_patchlands:reinforced_warped_stem",
+
+    "the_patchlands:reinforced_stripped_oak_log",
+    "the_patchlands:reinforced_stripped_acacia_log",
+    "the_patchlands:reinforced_stripped_birch_log",
+    "the_patchlands:reinforced_stripped_spruce_log",
+    "the_patchlands:reinforced_stripped_dark_oak_log",
+    "the_patchlands:reinforced_stripped_jungle_log",
+    "the_patchlands:reinforced_stripped_crimson_stem",
+    "the_patchlands:reinforced_stripped_warped_stem"
+  ]
+}

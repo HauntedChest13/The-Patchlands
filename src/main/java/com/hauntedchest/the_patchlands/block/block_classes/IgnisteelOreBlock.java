@@ -38,9 +38,6 @@ public class IgnisteelOreBlock extends Block {
         if (result < 70) {
             Block.popResource(lvl, pos, TPItemRegister.RAW_IGNISTEEL.get().getDefaultInstance());
         }
-        if (result < 60) {
-            Block.popResource(lvl, pos, TPBlockRegister.BRITTLESTONE.get().asItem().getDefaultInstance());
-        }
     }
 
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "the_patchlands:block/reinforced_crimson_stem_top",
+    "side": "the_patchlands:block/reinforced_stripped_crimson_stem"
+  }
+}

@@ -44,6 +44,26 @@ public class PatchlandsMain
         ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_BAR_DOOR.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_CHAINS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_LANTERN_BLOCK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.SOUL_IGNISTEEL_LANTERN_BLOCK.get(), RenderType.cutout());
+
+        //Wretched Leaf Colors
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.GREEN_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.WHITE_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.BLACK_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.YELLOW_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.CYAN_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.GRAY_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.LIGHT_GRAY_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.LIGHT_BLUE_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.LIME_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.RED_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.BROWN_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.ORANGE_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.MAGENTA_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.PURPLE_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.PINK_WRETCHED_LEAF.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.BLUE_WRETCHED_LEAF.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event)

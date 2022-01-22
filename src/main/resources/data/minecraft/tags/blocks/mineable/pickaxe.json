@@ -1,14 +1,22 @@
 {
   "replace": false,
   "values": [
-      "the_patchlands:brittlestone",
-      "the_patchlands:ignisteel_ore",
-      "the_patchlands:ignisteel_block",
+    "the_patchlands:brittlestone",
+    "the_patchlands:polished_brittlestone",
+    "the_patchlands:chiseled_polished_brittlestone",
+    "the_patchlands:polished_brittlestone_bricks",
+    "the_patchlands:cracked_polished_brittlestone_bricks",
+
+    "the_patchlands:ignisteel_ore",
+    "the_patchlands:ignisteel_block",
     "the_patchlands:cut_ignisteel",
     "the_patchlands:cut_ignisteel_tiles",
-      "the_patchlands:raw_ignisteel_block",
+    "the_patchlands:ignisteel_bricks",
+    "the_patchlands:raw_ignisteel_block",
     "the_patchlands:ignisteel_bars",
     "the_patchlands:ignisteel_bar_door",
-    "the_patchlands:ignisteel_chain"
+    "the_patchlands:ignisteel_chain",
+    "the_patchlands:ignisteel_lantern_block",
+    "the_patchlands:soul_ignisteel_lantern_block"
   ]
 }
