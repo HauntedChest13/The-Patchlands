@@ -1,15 +1,12 @@
 package com.hauntedchest.the_patchlands.block.block_classes;
 
-import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -20,8 +17,10 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import javax.annotation.Nullable;
 
-public class WretchedLeafBlock extends Block{
+
+public class OvergrownWretchedLeafBlock extends Block{
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     protected static final float AABB_OFFSET = 3.0F;
@@ -30,7 +29,7 @@ public class WretchedLeafBlock extends Block{
     protected static final VoxelShape SOUTH_AABB = Block.box(6D, 2D, 1D, 11D, 11D, 6D);
     protected static final VoxelShape NORTH_AABB = Block.box(6D, 2D, 10D, 11D, 11D, 15D);
 
-    public WretchedLeafBlock(Properties properties) {
+    public OvergrownWretchedLeafBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }

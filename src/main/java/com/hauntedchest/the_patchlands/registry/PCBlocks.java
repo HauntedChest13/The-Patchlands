@@ -3,11 +3,10 @@ package com.hauntedchest.the_patchlands.registry;
 import com.hauntedchest.the_patchlands.PatchlandsMain;
 import com.hauntedchest.the_patchlands.block.block_classes.IgnisteelLanternBlock;
 import com.hauntedchest.the_patchlands.block.block_classes.IgnisteelOreBlock;
+import com.hauntedchest.the_patchlands.block.block_classes.OvergrownWretchedLeafBlock;
 import com.hauntedchest.the_patchlands.block.block_classes.WretchedLeafBlock;
 import com.hauntedchest.the_patchlands.item.TPCreativeTab;
-import com.hauntedchest.the_patchlands.registry.TPItemRegister;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -25,7 +24,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class TPBlockRegister {
+public class PCBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PatchlandsMain.MOD_ID);
 
@@ -68,23 +67,24 @@ public class TPBlockRegister {
     public static final RegistryObject<Block> REINFORCED_STRIPPED_DARK_OAK_LOG = registerBlock("reinforced_stripped_dark_oak_log", () -> reinforcedLog(MaterialColor.WOOD));
 
     //Wretched Grove Blocks
-    public static final RegistryObject<Block> WRETCHED_LEAF = registerBlock("wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> WHITE_WRETCHED_LEAF = registerBlock("white_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> ORANGE_WRETCHED_LEAF = registerBlock("orange_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> MAGENTA_WRETCHED_LEAF = registerBlock("magenta_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> LIGHT_BLUE_WRETCHED_LEAF = registerBlock("light_blue_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> YELLOW_WRETCHED_LEAF = registerBlock("yellow_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> LIME_WRETCHED_LEAF = registerBlock("lime_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> PINK_WRETCHED_LEAF = registerBlock("pink_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> GRAY_WRETCHED_LEAF = registerBlock("gray_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> LIGHT_GRAY_WRETCHED_LEAF = registerBlock("light_gray_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> CYAN_WRETCHED_LEAF = registerBlock("cyan_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> PURPLE_WRETCHED_LEAF = registerBlock("purple_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> BLUE_WRETCHED_LEAF = registerBlock("blue_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> BROWN_WRETCHED_LEAF = registerBlock("brown_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> GREEN_WRETCHED_LEAF = registerBlock("green_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> RED_WRETCHED_LEAF = registerBlock("red_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
-    public static final RegistryObject<Block> BLACK_WRETCHED_LEAF = registerBlock("black_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.4F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> OVERGROWN_WRETCHED_LEAF = registerBlock("overgrown_wretched_leaf", () -> new OvergrownWretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 5;})));
+    public static final RegistryObject<Block> WRETCHED_LEAF = registerBlock("wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> WHITE_WRETCHED_LEAF = registerBlock("white_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> ORANGE_WRETCHED_LEAF = registerBlock("orange_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> MAGENTA_WRETCHED_LEAF = registerBlock("magenta_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> LIGHT_BLUE_WRETCHED_LEAF = registerBlock("light_blue_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> YELLOW_WRETCHED_LEAF = registerBlock("yellow_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> LIME_WRETCHED_LEAF = registerBlock("lime_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> PINK_WRETCHED_LEAF = registerBlock("pink_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> GRAY_WRETCHED_LEAF = registerBlock("gray_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> LIGHT_GRAY_WRETCHED_LEAF = registerBlock("light_gray_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> CYAN_WRETCHED_LEAF = registerBlock("cyan_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> PURPLE_WRETCHED_LEAF = registerBlock("purple_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> BLUE_WRETCHED_LEAF = registerBlock("blue_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> BROWN_WRETCHED_LEAF = registerBlock("brown_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> GREEN_WRETCHED_LEAF = registerBlock("green_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> RED_WRETCHED_LEAF = registerBlock("red_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
+    public static final RegistryObject<Block> BLACK_WRETCHED_LEAF = registerBlock("black_wretched_leaf", () -> new WretchedLeafBlock(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.2F).sound(SoundType.GRASS).noOcclusion().lightLevel((p_152680_) -> {return 7;})));
 
     //TNTS
 
@@ -95,7 +95,7 @@ public class TPBlockRegister {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab){
-        TPItemRegister.ITEMS.register(name, () -> new BlockItem(block.get(),
+        PCItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(tab)));
     }
 
@@ -106,7 +106,7 @@ public class TPBlockRegister {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
-        TPItemRegister.ITEMS.register(name, () -> new BlockItem(block.get(),
+        PCItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(TPCreativeTab.PATCHLANDS_BLOCKS_TAB)));
     }
     

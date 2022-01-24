@@ -16,7 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = PatchlandsMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class TPParticleTypes {
+public class PCParticleTypes {
     public static final DeferredRegister<ParticleType<?>> PARTICLES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, PatchlandsMain.MOD_ID);
 
     public static final RegistryObject<SimpleParticleType> RUST = PARTICLES.register("rust", () -> new SimpleParticleType(false));

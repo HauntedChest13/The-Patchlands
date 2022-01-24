@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dyed_leaves",
+  "ingredients": [
+    {
+      "item": "the_patchlands:wretched_leaf"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "item": "the_patchlands:yellow_wretched_leaf"
+  }
+}

@@ -1,10 +1,9 @@
 package com.hauntedchest.the_patchlands;
 
-import com.hauntedchest.the_patchlands.registry.TPBlockRegister;
-import com.hauntedchest.the_patchlands.registry.TPItemRegister;
-import com.hauntedchest.the_patchlands.registry.TPParticleTypes;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import com.hauntedchest.the_patchlands.client.PatchlandsClient;
+import com.hauntedchest.the_patchlands.registry.PCBlocks;
+import com.hauntedchest.the_patchlands.registry.PCItems;
+import com.hauntedchest.the_patchlands.registry.PCParticleTypes;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,9 +26,9 @@ public class PatchlandsMain
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        TPItemRegister.register(eventBus);
-        TPBlockRegister.register(eventBus);
-        TPParticleTypes.register(eventBus);
+        PCItems.register(eventBus);
+        PCBlocks.register(eventBus);
+        PCParticleTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::setupClient);
@@ -40,34 +39,19 @@ public class PatchlandsMain
     }
 
     private void setupClient(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_BARS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_BAR_DOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_CHAINS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.IGNISTEEL_LANTERN_BLOCK.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.SOUL_IGNISTEEL_LANTERN_BLOCK.get(), RenderType.cutout());
+        PatchlandsClient.registerBlockRenderers();
 
-        //Wretched Leaf Colors
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.GREEN_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.WHITE_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.BLACK_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.YELLOW_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.CYAN_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.GRAY_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.LIGHT_GRAY_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.LIGHT_BLUE_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.LIME_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.RED_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.BROWN_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.ORANGE_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.MAGENTA_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.PURPLE_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.PINK_WRETCHED_LEAF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TPBlockRegister.BLUE_WRETCHED_LEAF.get(), RenderType.cutout());
+        event.enqueueWork(() -> {
+            PatchlandsClient.registerBlockColors();
+            PatchlandsClient.registerItemColors();
+        });
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
+
+
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());

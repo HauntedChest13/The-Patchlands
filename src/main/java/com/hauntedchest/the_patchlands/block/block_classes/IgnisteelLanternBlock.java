@@ -1,9 +1,8 @@
 package com.hauntedchest.the_patchlands.block.block_classes;
 
-import com.hauntedchest.the_patchlands.registry.TPParticleTypes;
+import com.hauntedchest.the_patchlands.registry.PCParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -142,14 +141,14 @@ public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterlo
         double d0 = (double)i + p_154707_.nextDouble();
         double d1 = (double)j + 0.7D;
         double d2 = (double)k + p_154707_.nextDouble();
-        p_154705_.addParticle(TPParticleTypes.RUST.get(), d0, d1, d2, 0.0D, 0.0D, 0.0D);
+        p_154705_.addParticle(PCParticleTypes.RUST.get(), d0, d1, d2, 0.0D, 0.0D, 0.0D);
         BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
         for(int l = 0; l < 14; ++l) {
             blockpos$mutableblockpos.set(i + Mth.nextInt(p_154707_, -10, 10), j - p_154707_.nextInt(10), k + Mth.nextInt(p_154707_, -10, 10));
             BlockState blockstate = p_154705_.getBlockState(blockpos$mutableblockpos);
             if (!blockstate.isCollisionShapeFullBlock(p_154705_, blockpos$mutableblockpos)) {
-                p_154705_.addParticle(TPParticleTypes.RUST.get(), (double)blockpos$mutableblockpos.getX() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getY() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getZ() + p_154707_.nextDouble(), 0.0D, 0.0D, 0.0D);
+                p_154705_.addParticle(PCParticleTypes.RUST.get(), (double)blockpos$mutableblockpos.getX() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getY() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getZ() + p_154707_.nextDouble(), 0.0D, 0.0D, 0.0D);
             }
         }
 

@@ -1,7 +1,6 @@
 package com.hauntedchest.the_patchlands.block.block_classes;
 
-import com.hauntedchest.the_patchlands.registry.TPBlockRegister;
-import com.hauntedchest.the_patchlands.registry.TPItemRegister;
+import com.hauntedchest.the_patchlands.registry.PCItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
@@ -36,7 +35,7 @@ public class IgnisteelOreBlock extends Block {
         int result = r.nextInt(99-1);
 
         if (result < 70) {
-            Block.popResource(lvl, pos, TPItemRegister.RAW_IGNISTEEL.get().getDefaultInstance());
+            Block.popResource(lvl, pos, PCItems.RAW_IGNISTEEL.get().getDefaultInstance());
         }
     }
 
