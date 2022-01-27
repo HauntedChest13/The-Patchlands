@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "the_patchlands:block/reinforced_dark_oak_log_top",
-    "side": "the_patchlands:block/reinforced_stripped_dark_oak_log"
-  }
-}

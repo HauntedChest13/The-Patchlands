@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "the_patchlands:block/reinforced_birch_log_top",
-    "side": "the_patchlands:block/reinforced_stripped_birch_log"
-  }
-}
