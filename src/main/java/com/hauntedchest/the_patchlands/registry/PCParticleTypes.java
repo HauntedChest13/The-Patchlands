@@ -3,7 +3,6 @@ package com.hauntedchest.the_patchlands.registry;
 import com.hauntedchest.the_patchlands.PatchlandsMain;
 import com.hauntedchest.the_patchlands.client.particle.RustParticle;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.AshParticle;
 import net.minecraft.client.particle.ParticleEngine;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -11,9 +10,9 @@ import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(modid = PatchlandsMain.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PCParticleTypes {

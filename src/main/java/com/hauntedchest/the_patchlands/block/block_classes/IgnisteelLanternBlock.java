@@ -111,7 +111,7 @@ public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterlo
 
     public BlockState updateShape(BlockState p_153483_, Direction direction, BlockState blockState, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
         if (p_153483_.getValue(WATERLOGGED)) {
-            levelAccessor.getLiquidTicks().scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
+            levelAccessor.getFluidTicks().hasScheduledTick(blockPos, Fluids.WATER);
         }
 
         return getConnectedDirection(p_153483_).getOpposite() == direction && !p_153483_.canSurvive(levelAccessor, blockPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(p_153483_, direction, blockState, levelAccessor, blockPos, blockPos2);
