@@ -1,6 +1,7 @@
 package com.surrealitymodding.the_patchlands.client;
 
 import com.hauntedchest.the_patchlands.registry.PCBlocks;
+import com.surrealitymodding.the_patchlands.core.registry.PCBlocks;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.color.block.BlockColors;

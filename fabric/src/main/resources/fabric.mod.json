@@ -3,9 +3,9 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "Adds wood types for huge mushrooms.",
+  "description": "Adds a new overgrown dimension.",
   "authors": [ "Team Aurora" ],
-  "contributors": [ "StevePlayzz_", "JustoPlayzz_", "ex0planetary", "mcvinnyq" ],
+  "contributors": [ "HauntedChest", "StevenPlayzz_"],
   "contact": {
     "homepage": "https://discord.gg/teamaurora",
 	"issues": "https://github.com/TeamAuroraMods/${repo}/issues",
