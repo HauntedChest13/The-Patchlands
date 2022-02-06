@@ -1,16 +1,16 @@
 modLoader = "javafml"
 loaderVersion = "[39,)"
-issueTrackerURL = "https://github.com/TeamAuroraMods/${repo}/issues"
+issueTrackerURL = "https://github.com/Surreality-Modding/${repo}/issues"
 license = "GPLv3"
 
 [[mods]]
 modId = "${id}"
 version = "${version}"
 displayName = "${name}"
-authors = "Team Aurora"
-credits = "StevePlayzz_, JustoPlayzz_, ex0planetary, mcvinnyq"
+authors = "Surreality Modding"
+credits = "Haunted Chest, StevenPlayzz, TheOnlyTails"
 description = '''
-Adds wood types for huge mushrooms.
+A new dimension based around new exotic plants, new features and mobs, and an entire new dimension to explore!
 '''
 #updateJSONURL = ""
 logoFile="logo.png"

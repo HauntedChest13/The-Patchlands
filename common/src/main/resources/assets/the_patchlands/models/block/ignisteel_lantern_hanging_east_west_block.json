@@ -1,0 +1,56 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "the_patchlands:block/ignisteel_lantern_hanging",
+		"particle": "the_patchlands:block/ignisteel_lantern_hanging"
+	},
+	"elements": [
+		{
+			"from": [2, 6, 5.5],
+			"to": [14, 11, 10.5],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 2.5], "texture": "#0"},
+				"east": {"uv": [6, 2.5, 8.5, 5], "texture": "#0"},
+				"south": {"uv": [0, 2.5, 6, 5], "texture": "#0"},
+				"west": {"uv": [6, 5, 8.5, 7.5], "texture": "#0"},
+				"up": {"uv": [6, 7.5, 0, 5], "texture": "#0"},
+				"down": {"uv": [12, 0, 6, 2.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8.25, 11, 0],
+			"to": [14.25, 16, 0],
+			"rotation": {"angle": -45, "axis": "y", "origin": [0, 0, 0.25]},
+			"faces": {
+				"north": {"uv": [0, 7.5, 3, 10], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 2.5], "texture": "#0"},
+				"south": {"uv": [3, 7.5, 6, 10], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 2.5], "texture": "#0"},
+				"up": {"uv": [2, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [2, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"from": [-2.75, 11, 11.5],
+			"to": [3.25, 16, 11.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [0, 0, 0.25]},
+			"faces": {
+				"north": {"uv": [0, 7.5, 3, 10], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 2.5], "texture": "#0"},
+				"south": {"uv": [3, 7.5, 6, 10], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 2.5], "texture": "#0"},
+				"up": {"uv": [2, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [2, 0, 0, 0], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

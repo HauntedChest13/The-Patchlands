@@ -16,9 +16,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-
-import javax.annotation.Nullable;
-
+import org.jetbrains.annotations.Nullable;
 
 public class OvergrownWretchedLeafBlock extends Block{
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -70,7 +68,7 @@ public class OvergrownWretchedLeafBlock extends Block{
             return Blocks.AIR.defaultBlockState();
         } else {
             if (pState.getValue(WATERLOGGED)) {
-                pLevel.getLiquidTicks().scheduleTick(pCurrentPos, Fluids.WATER, Fluids.WATER.getTickDelay(pLevel));
+                pLevel.getFluidTicks().hasScheduledTick(pCurrentPos, Fluids.WATER);
             }
 
             return super.updateShape(pState, pFacing, pFacingState, pLevel, pCurrentPos, pFacingPos);

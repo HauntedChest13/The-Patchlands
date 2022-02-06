@@ -1,6 +1,6 @@
 package com.surrealitymodding.the_patchlands.common.block;
 
-import com.surrealitymodding.the_patchlands.core.registry.PCParticleTypes;
+import com.surrealitymodding.the_patchlands.core.registry.PCParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
@@ -22,8 +22,8 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
 import java.util.Random;
 
 public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterloggedBlock {
@@ -112,7 +112,7 @@ public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterlo
 
     public BlockState updateShape(BlockState p_153483_, Direction direction, BlockState blockState, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
         if (p_153483_.getValue(WATERLOGGED)) {
-            levelAccessor.getLiquidTicks().scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
+            levelAccessor.getFluidTicks().hasScheduledTick(blockPos, Fluids.WATER);
         }
 
         return getConnectedDirection(p_153483_).getOpposite() == direction && !p_153483_.canSurvive(levelAccessor, blockPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(p_153483_, direction, blockState, levelAccessor, blockPos, blockPos2);
@@ -142,14 +142,14 @@ public class IgnisteelLanternBlock extends LanternBlock implements SimpleWaterlo
         double d0 = (double)i + p_154707_.nextDouble();
         double d1 = (double)j + 0.7D;
         double d2 = (double)k + p_154707_.nextDouble();
-        p_154705_.addParticle(PCParticleTypes.RUST.get(), d0, d1, d2, 0.0D, 0.0D, 0.0D);
+        p_154705_.addParticle(PCParticles.RUST.get(), d0, d1, d2, 0.0D, 0.0D, 0.0D);
         BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
         for(int l = 0; l < 14; ++l) {
             blockpos$mutableblockpos.set(i + Mth.nextInt(p_154707_, -10, 10), j - p_154707_.nextInt(10), k + Mth.nextInt(p_154707_, -10, 10));
             BlockState blockstate = p_154705_.getBlockState(blockpos$mutableblockpos);
             if (!blockstate.isCollisionShapeFullBlock(p_154705_, blockpos$mutableblockpos)) {
-                p_154705_.addParticle(PCParticleTypes.RUST.get(), (double)blockpos$mutableblockpos.getX() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getY() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getZ() + p_154707_.nextDouble(), 0.0D, 0.0D, 0.0D);
+                p_154705_.addParticle(PCParticles.RUST.get(), (double)blockpos$mutableblockpos.getX() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getY() + p_154707_.nextDouble(), (double)blockpos$mutableblockpos.getZ() + p_154707_.nextDouble(), 0.0D, 0.0D, 0.0D);
             }
         }
 

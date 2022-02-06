@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dyed_leaves",
+  "ingredients": [
+    {
+      "item": "the_patchlands:wretched_leaf"
+    },
+    {
+      "item": "minecraft:magenta__dye"
+    }
+  ],
+  "result": {
+    "item": "the_patchlands:magenta_wretched_leaf"
+  }
+}

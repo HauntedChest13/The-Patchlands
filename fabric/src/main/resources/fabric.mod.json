@@ -4,12 +4,12 @@
   "version": "${version}",
   "name": "${name}",
   "description": "Adds a new overgrown dimension.",
-  "authors": [ "Team Aurora" ],
-  "contributors": [ "HauntedChest", "StevenPlayzz_"],
+  "authors": [ "Surreality Modding" ],
+  "contributors": [ "HauntedChest", "StevenPlayzz_", "TheOnlyTails"],
   "contact": {
-    "homepage": "https://discord.gg/teamaurora",
-	"issues": "https://github.com/TeamAuroraMods/${repo}/issues",
-    "sources": "https://github.com/TeamAuroraMods/${repo}/"
+    "homepage": "https://discord.gg/4UT9ZZSSqX",
+	"issues": "https://github.com/Surreality-Modding/${repo}/issues",
+    "sources": "https://github.com/Surreality-Modding/${repo}/"
   },
   "license": "GPLv3",
   "icon": "icon.png",
@@ -20,10 +20,10 @@
   ],
   "entrypoints": {
     "main": [
-      "com.teamaurora.enhanced_mushrooms.core.fabric.EnhancedMushroomsFabric"
+      "com.surrealitymodding.the_patchlands.core.fabric.ThePatchlandsFabric"
     ],
     "client": [
-      "com.teamaurora.enhanced_mushrooms.client.fabric.EMClient"
+      "com.surrealitymodding.the_patchlands.core.fabric.ThePatchlandsClient"
     ]
   },
   "depends": {

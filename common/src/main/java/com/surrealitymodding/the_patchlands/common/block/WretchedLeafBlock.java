@@ -63,7 +63,7 @@ public class WretchedLeafBlock extends Block {
             return Blocks.AIR.defaultBlockState();
         } else {
             if (pState.getValue(WATERLOGGED)) {
-                pLevel.getLiquidTicks().scheduleTick(pCurrentPos, Fluids.WATER, Fluids.WATER.getTickDelay(pLevel));
+                pLevel.getFluidTicks().hasScheduledTick(pCurrentPos, Fluids.WATER);
             }
 
             return super.updateShape(pState, pFacing, pFacingState, pLevel, pCurrentPos, pFacingPos);

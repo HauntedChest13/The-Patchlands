@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    "XXX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_warped_stem"
+    },
+    "X": {
+      "item": "the_patchlands:ignisteel_nugget"
+    }
+  },
+  "result": {
+    "item": "the_patchlands:reinforced_stripped_warped_stem"
+  }
+}
